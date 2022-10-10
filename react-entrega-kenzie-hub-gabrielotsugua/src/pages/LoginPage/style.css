@@ -1,0 +1,86 @@
+.login_page {
+  width: 90%;
+  margin: 20px auto;
+  animation: loginPage 1s;
+}
+
+.login_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.login_logo h1 {
+  font-size: var(--title);
+  color: var(--color-primary);
+}
+
+.login_box {
+  background-color: var(--color-gray-3);
+  padding: 30px 15px 15px 15px;
+  border-radius: 5px;
+  display: grid;
+  gap: 15px;
+}
+
+.login_box h2 {
+  font-size: var(--title);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.login_box p {
+  margin: 5px 0;
+  font-size: var(--headline);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  color: var(--color-gray-1);
+}
+
+.login {
+  display: grid;
+  gap: 15px;
+}
+
+.login label {
+  font-size: var(--headline);
+  font-weight: 500;
+}
+
+.login span {
+  color: rgb(214, 30, 30);
+  font-size: var(--headline);
+}
+
+@keyframes loginPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  
+  .login_page {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .login_page {
+    width: 28%;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  
+  .login_page {
+    width: 21%;
+  }
+}

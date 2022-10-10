@@ -1,0 +1,85 @@
+.register_page {
+  width: 90%;
+  margin: 20px auto;
+  animation: registerPage 1s;
+}
+
+.register_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.register_logo h1 {
+  font-size: var(--title);
+  color: var(--color-primary);
+}
+
+.register_box {
+  background-color: var(--color-gray-3);
+  padding: 30px 15px 15px 15px;
+  border-radius: 5px;
+  display: grid;
+  gap: 15px;
+}
+
+.register_box h2 {
+  font-size: var(--title);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.register_box p {
+  font-size: var(--headline);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  color: var(--color-gray-1);
+}
+
+.register {
+  display: grid;
+  gap: 15px;
+}
+
+.register label {
+  font-size: var(--headline);
+  font-weight: 500;
+}
+
+.register span {
+  color: rgb(214, 30, 30);
+  font-size: var(--headline);
+}
+
+@keyframes registerPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  
+  .register_page {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .register_page {
+    width: 28%;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  
+  .register_page {
+    width: 21%;
+  }
+}
