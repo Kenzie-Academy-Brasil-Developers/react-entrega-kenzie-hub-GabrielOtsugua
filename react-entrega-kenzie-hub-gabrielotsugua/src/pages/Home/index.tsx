@@ -1,14 +1,16 @@
 import "./style.css"
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { BlackButton } from '../../components/Buttons'
-import { Context } from '../../contexts'
+import { Context } from '../../contexts/userContext'
 import { MdPostAdd } from "react-icons/md";
 import ModalAdd from '../../components/ModalAdd';
 import ModalRemove from "../../components/ModalRemove";
+import { TechContext } from "../../contexts/techContext";
 
 const Home = () => {
 
-  const { user, goOut, handleModalAdd, techList, handleModalRemove } = useContext(Context)
+  const { user, goOut } = useContext(Context)
+  const { handleModalAdd, techList, handleModalRemove } = useContext(TechContext)
 
   return (
     <>
@@ -18,7 +20,7 @@ const Home = () => {
       </header>
 
       <div className='start'>
-        <h2>Olá, {user.name[0].toUpperCase() + user.name.slice(1)}</h2>
+        <h2>Olá, {(user.name[0]).toUpperCase() + (user.name).slice(1)}</h2>
         <p>{user.course_module}</p>
       </div>
 

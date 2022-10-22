@@ -4,20 +4,28 @@ import { PinkButton } from '../Buttons'
 import { Input, Select } from "../Inputs"
 import { AiOutlineClose } from "react-icons/ai";
 import ReactModal from 'react-modal';
-import { Context } from '../../contexts';
+import { Context } from '../../contexts/userContext';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { modalAddSchema } from '../../validations';
+import { TechContext } from "../../contexts/techContext";
+
+interface iErrors {
+  errors: string,
+  id: string,
+  title: string,
+  status: string
+}
 
 const ModalAdd = () => {
 
   ReactModal.setAppElement("#root")
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm<iErrors>({
     resolver: yupResolver(modalAddSchema)
   })
 
-  const { modalAdd, handleModalAdd, addTech } = useContext(Context)
+  const { modalAdd, handleModalAdd, addTech } = useContext(TechContext)
 
   return (
     <>

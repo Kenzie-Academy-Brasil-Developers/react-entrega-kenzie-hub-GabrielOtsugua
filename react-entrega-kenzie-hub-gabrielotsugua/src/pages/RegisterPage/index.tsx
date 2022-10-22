@@ -1,23 +1,32 @@
 import "./style.css"
 import 'react-toastify/dist/ReactToastify.css'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { BlackButton, NegativePinkButton } from '../../components/Buttons'
 import { Input, Select } from '../../components/Inputs'
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { schema } from '../../validations'
 import { useNavigate } from "react-router-dom"
-import { Context } from "../../contexts"
+import { Context } from "../../contexts/userContext"
+
+interface iErrors {
+  name: string,
+  email: string,
+  password: string | number,
+  passwordAgain: string | number,
+  bio: string,
+  contact: number,
+  course_module: string
+}
 
 const RegisterPage = () => {
 
+  const navigate = useNavigate()
   const { userRegister } = useContext(Context)
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm<iErrors>({
     resolver: yupResolver(schema)
   })
-
-  const navigate = useNavigate()
 
   return (
     <>

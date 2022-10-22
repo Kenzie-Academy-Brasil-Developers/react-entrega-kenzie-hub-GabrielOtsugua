@@ -7,13 +7,18 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { loginSchema } from '../../validations'
 import { useNavigate } from "react-router-dom"
-import { Context } from "../../contexts"
+import { Context } from "../../contexts/userContext"
+
+interface iErrors {
+  email: string,
+  password: string | number
+}
 
 const LoginPage = () => {
 
   const { userLogin } = useContext(Context)
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm<iErrors>({
     resolver: yupResolver(loginSchema)
   })
 
