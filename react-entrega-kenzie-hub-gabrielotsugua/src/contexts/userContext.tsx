@@ -35,7 +35,7 @@ interface iUserApi {
   token: string
 }
 
-export const Context = createContext({} as iContext)
+export const userContext = createContext({} as iContext)
 
 export const Provider = ({ children }: iProviderProps) => {
 
@@ -110,8 +110,8 @@ export const Provider = ({ children }: iProviderProps) => {
   }
 
   return (
-    <Context.Provider value={{ user, setUser, userRegister, userLogin, goOut }}>
+    <userContext.Provider value={{ user, setUser, userRegister, userLogin, goOut }}>
       {children}
-    </Context.Provider>
+    </userContext.Provider>
   )
 }

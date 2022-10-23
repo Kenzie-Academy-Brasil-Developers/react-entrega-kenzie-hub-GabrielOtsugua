@@ -39,21 +39,6 @@
   color: var(--color-gray-1);
 }
 
-.register {
-  display: grid;
-  gap: 15px;
-}
-
-.register label {
-  font-size: var(--headline);
-  font-weight: 500;
-}
-
-.register span {
-  color: rgb(214, 30, 30);
-  font-size: var(--headline);
-}
-
 @keyframes registerPage {
   0% {
     opacity: 0;

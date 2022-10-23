@@ -1,10 +1,9 @@
 import "./style.css"
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { PinkButton } from '../Buttons'
 import { Input, Select } from "../Inputs"
 import { AiOutlineClose } from "react-icons/ai";
 import ReactModal from 'react-modal';
-import { Context } from '../../contexts/userContext';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { modalAddSchema } from '../../validations';

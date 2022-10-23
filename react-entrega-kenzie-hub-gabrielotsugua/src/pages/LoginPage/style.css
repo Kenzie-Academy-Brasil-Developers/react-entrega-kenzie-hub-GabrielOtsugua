@@ -40,21 +40,6 @@
   color: var(--color-gray-1);
 }
 
-.login {
-  display: grid;
-  gap: 15px;
-}
-
-.login label {
-  font-size: var(--headline);
-  font-weight: 500;
-}
-
-.login span {
-  color: rgb(214, 30, 30);
-  font-size: var(--headline);
-}
-
 @keyframes loginPage {
   0% {
     opacity: 0;
